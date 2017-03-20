@@ -78,6 +78,66 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/03/20/buffer.copy/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="徐旭" target="_blank" itemprop="author">徐旭</a>
+		
+  <p class="article-time">
+    <time datetime="2017-03-20T11:01:48.224Z" itemprop="datePublished"> Published 2017-03-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="Node-js中Buffer-copy-用法"><a href="#Node-js中Buffer-copy-用法" class="headerlink" title="Node.js中Buffer.copy()用法:"></a>Node.js中Buffer.copy()用法:</h1><h2 id="方法说明"><a href="#方法说明" class="headerlink" title="方法说明:"></a>方法说明:</h2><p>定义:进行不同buffer之间的复制操作，从源buffer复制数据并替换到目标buffer的指定位置  </p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法:"></a>语法:</h2><p>buffer.copy(targetBuffer, [targetStart], [sourceStart], [sourceEnd])</p>
+<h2 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释:"></a>参数解释:</h2><p>targetBuffer:  目标buffer,执行复制替换的buffer<br>targetStart:   目标buffer数据替换的起始位置<br>sourceStart:   源buffer数据复制的的起始位置<br>sourceEnd:     源buffer数据复制的结束位置</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h2><pre><code>var buffer = new Buffer(length);
+var pos = 0;
+for (var i = 0; i &lt; list.length; i++) {
+    var buf = list[i];
+    // 将buf中4到6之间的内容复制到buffer(从pos位开始)中
+    buf.copy(buffer, pos, 4, 6);
+    pos += buf.length;
+}
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/03/19/call/" title="javascript call()方法" itemprop="url">javascript call()方法</a>
   </h1>
   <p class="article-author">By
@@ -126,9 +186,9 @@ function Brother(){
 var sis = new Sister();
 var bro = new Brother();
 sis.sayAge.call(bro);
-</code></pre><p>解析:sis.sayAge.call(bro)调用的方法是Sister中的方法，但是其中的this(上下文)却变成了<br>Brother,用文档的解释就是:只有这个sayAge是sayAge是sis对象的，其执行环境却是bro的</p>
+</code></pre><p>解析:sis.sayAge.call(bro)调用的方法是Sister中的方法，但是其中的this(上下文)却变成了Brother,<br>用文档的解释就是:只有这个sayAge是sayAge是sis对象的，其执行环境却是bro的</p>
 <p>简而言之:<em>sis.sayAge.call(bro)意思就是,单单就sis的sayAge移动到bro对象中执行</em></p>
-<p>参考地址:<br><a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">1</a>: <a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">http://blog.csdn.net/longjuesi/article/details/29859599</a></p>
+<p>参考地址:<br>[1] (<a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">http://blog.csdn.net/longjuesi/article/details/29859599</a>)</p>
 
         
         
