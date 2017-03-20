@@ -128,7 +128,7 @@ var bro = new Brother();
 sis.sayAge.call(bro);
 </code></pre><p>解析:sis.sayAge.call(bro)调用的方法是Sister中的方法，但是其中的this(上下文)却变成了<br>Brother,用文档的解释就是:只有这个sayAge是sayAge是sis对象的，其执行环境却是bro的</p>
 <p>简而言之:<em>sis.sayAge.call(bro)意思就是,单单就sis的sayAge移动到bro对象中执行</em></p>
-<p>参考地址:<br><a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">1</a></p>
+<p>参考地址:<br><a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">1</a><a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">http://blog.csdn.net/longjuesi/article/details/29859599</a></p>
 
         
         
