@@ -94,7 +94,7 @@
         <h1 id="javascript-call-方法"><a href="#javascript-call-方法" class="headerlink" title="javascript call()方法"></a>javascript call()方法</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>调用一个对象的一个方法，以另一个对象替换当前对象</p>
 <h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><p>call([thisObj[,arg1[arg2[,[,…argN]]]]]);</p>
 <h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><p>thisObj: 可选项，将被当作当前对象的对象<br>arg1,arg2,…,argN: 可选项，被传递方法的参数序列  </p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>call()方法可以用来代替另一个对象来调用一个方法。call()方法可将一个函数的<br>对象上下文从初始的上下文转变由thisObj指定的新对象  </p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>call()方法可以用来代替另一个对象来调用一个方法。call()方法可将一个函数的对象上下文从初始的<br>上下文转变由thisObj指定的新对象  </p>
 <p>注:如果没有提供thisObj参数，那么Global对象被用作thisObj</p>
 <h4 id="实例一"><a href="#实例一" class="headerlink" title="实例一:"></a><strong>实例一:</strong></h4><pre><code>var Add = function(a,b){
     console.info(a+b);
@@ -126,9 +126,9 @@ function Brother(){
 var sis = new Sister();
 var bro = new Brother();
 sis.sayAge.call(bro);
-</code></pre><p>解析:sis.sayAge.call(bro)调用的方法是Sister中的方法，但是<br>其中的this(上下文)却变成了Brother,用文档的解释就是:只有这个<br>sayAge是sayAge是sis对象的，其执行环境却是bro的</p>
-<p>简而言之:<em>sis.sayAge.call(bro)意思就是,单单就sis的sayAge<br>移动到bro对象中执行</em></p>
-<p>参考地址:  </p>
+</code></pre><p>解析:sis.sayAge.call(bro)调用的方法是Sister中的方法，但是其中的this(上下文)却变成了<br>Brother,用文档的解释就是:只有这个sayAge是sayAge是sis对象的，其执行环境却是bro的</p>
+<p>简而言之:<em>sis.sayAge.call(bro)意思就是,单单就sis的sayAge移动到bro对象中执行</em></p>
+<p>参考地址:<br><a href="http://blog.csdn.net/longjuesi/article/details/29859599" target="_blank" rel="external">1</a></p>
 
         
         
